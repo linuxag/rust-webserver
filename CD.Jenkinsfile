@@ -15,7 +15,7 @@ pipeline
             steps{
                 script 
                 {
-                    emailext subject: '${JOB_NAME} - ${BUILD_NUMBER} ', body: 'Job url : ${BUILD_URL}',  to: 'jsnrahul@gmail.com'
+                    emailext subject: '${JOB_NAME} - ${BUILD_NUMBER} ', body: 'Job url : ${BUILD_URL}',  to: 'ashutoshgupta0077@gmail.com'
                 }
             }
         
