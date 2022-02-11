@@ -40,7 +40,7 @@ pipeline
                 sh '''
                 sed -i 's/unique_tag/$app_version/g' rust-cart-app1-deployment.yml
                 #echo "kubectl deploy"
-                kubectl rm -f rust-cart-app1-deployment.yml
+                kubectl delete -f rust-cart-app1-deployment.yml
                 kubectl apply -f rust-cart-app1-deployment.yml
                 '''
             }
