@@ -4,6 +4,10 @@ pipeline
     {
         label 'control'
     }
+    parameters { 
+    string(name: 'project_owner_team_email', defaultValue: project_owner_team_email, description: 'project_owner_team_email') 
+    string(name: 'app_version', defaultValue: 'v1', description: 'app_version') 
+    }
     stages
     {
         stage('send-notification')
@@ -32,7 +36,7 @@ pipeline
             
             steps{
                 sh '''
-                sed -i 's/unique_tag/latest/g' rust-cart-app1-deployment.yml
+                sed -i 's/unique_tag/$app_version/g' rust-cart-app1-deployment.yml
                 #echo "kubectl deploy"
                 kubectl apply -f rust-cart-app1-deployment.yml
                 '''
@@ -44,8 +48,8 @@ pipeline
             
             steps{
                 sh '''
-                sleep 5
-                curl 10.182.0.3:30000
+                sleep 15
+                curl 10.8.0.2:30010
                 '''
             }
         
