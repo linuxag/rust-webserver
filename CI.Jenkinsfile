@@ -19,10 +19,13 @@ pipeline
         {
             
             steps{
-                script 
+                /*script 
                 {
                     emailext subject: '${JOB_NAME} - ${BUILD_NUMBER} ', body: 'Job url : ${BUILD_URL}',  to: '${project_owner_team_email}'
-                }
+                }*/
+                sh '''
+                echo "mail sent"
+                '''
             }
         
         }
