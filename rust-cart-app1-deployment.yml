@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rust-cart-app1
-        image: newbielinux1/rust-cart-app1:$app_version
+        image: newbielinux1/rust-cart-app1:unique_tag
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
