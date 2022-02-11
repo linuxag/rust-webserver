@@ -2,7 +2,7 @@ pipeline
 {
     agent
     {
-        label 'control'
+        label 'worker1'
     }
     parameters { 
         string(name: 'app_version', defaultValue: 'v1', description: 'app_version') 
