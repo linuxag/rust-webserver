@@ -52,7 +52,7 @@ pipeline
             
             steps{
                 sh '''
-                sleep 15
+                sleep 20
                 curl 10.8.0.2:30010
                 echo "rust app deployement success"
                 '''
