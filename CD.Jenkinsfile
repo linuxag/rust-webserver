@@ -5,8 +5,7 @@ pipeline
         label 'control'
     }
     parameters { 
-    string(name: 'project_owner_team_email', defaultValue: project_owner_team_email, description: 'project_owner_team_email') 
-    string(name: 'app_version', defaultValue: 'v1', description: 'app_version') 
+        string(name: 'app_version', defaultValue: 'v1', description: 'app_version') 
     }
     stages
     {
